@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 export default function Loading() {
   return (
     <Container>
-      <ReactLoading type="spinningBubbles" color="#000" height={'20%'} width={'20%'} />
+      <ReactLoading type="spinningBubbles" color="#000" height={'50px'} width={'50px'} />
     </Container>
   )
 }

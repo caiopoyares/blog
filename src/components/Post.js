@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Moment from 'react-moment';
 import * as contentful from 'contentful';
+import Markdown from 'markdown-to-jsx';
 
 import { Container } from '../styledComponents';
 import Footer from './Footer';
@@ -39,7 +40,7 @@ class Post extends Component {
           <h3>{this.state.post.subtitle}</h3>
           <Link to={`/author/${this.state.post.postAuthor}`}><h4>{this.state.post.postAuthor}</h4></Link>
           <p className='post-meta'><Moment format='DD/MM/YY'>{this.state.post.postDate}</Moment> <span>•</span> {this.state.post.postDuration}</p>
-          <p>{this.state.post.content}</p>
+          <Markdown>{this.state.post.content}</Markdown>
         </StyledContainer >
         <Footer />
       </>
